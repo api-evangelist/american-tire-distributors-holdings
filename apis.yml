@@ -1,7 +1,12 @@
 aid: american-tire-distributors-holdings
-url: https://raw.githubusercontent.com/api-evangelist/american-tire-distributors-holdings/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/american-tire-distributors-holdings/refs/heads/main/apis.yml
 modified: '2026-03-23'
 apis: []
 common:
   - type: Website
     url: https://www.american-tire-distributors-holdings.com
+description: >-
+  American Tire Distributors is one of the largest independent suppliers of replacement
+  tires, distributing passenger, light truck, medium truck, and specialty tires across
+  North America.
