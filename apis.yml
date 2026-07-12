@@ -19,6 +19,8 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.j
 access: 3rd-Party
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/american-tire-distributors-holdings-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/american-tire-distributors
   - type: Website
