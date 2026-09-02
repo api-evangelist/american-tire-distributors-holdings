@@ -1,0 +1,17 @@
+generated: '2026-09-02'
+method: searched
+source: >-
+  https://www.atd.com/ (200), https://www.atd.com/what-we-offer/ (200),
+  https://atdonline.com/register (200), https://atdonline.com/login (200 - every other path 302s here)
+plan_count: 0
+note: >-
+  American Tire Distributors publishes no pricing of any kind on its public site - not for
+  tires and not for the partner API. ATD is a wholesale distributor: product pricing is
+  dealer-specific and is only visible inside the ATDOnline portal after a dealer account is
+  approved, and the integrator guides describe pulling "dealer-specific pricing" through the
+  API rather than any list price. There is likewise no published API plan, quota, or fee -
+  API access is a term of the dealer relationship, not a purchasable tier. plan_count: 0 is
+  a measured absence, not an unchecked field.
+pricing_url: null
+pricing_model: relationship-gated
+plans: []

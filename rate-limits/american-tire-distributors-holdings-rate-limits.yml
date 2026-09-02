@@ -1,0 +1,27 @@
+generated: '2026-09-02'
+method: searched
+source: >-
+  https://help.flxpoint.com/en_US/automotive-part/american-tire-distributors-as-a-source (200),
+  https://dataheretothere.com/2024/11/23/connecting-atd-american-tire-distributors/ (200),
+  https://www.sparkshipping.com/integrations/american-tire-distributors
+limit_count: 0
+note: >-
+  No published rate limits. ATD has no public developer documentation, so there is nothing
+  stating a per-key or per-account limit, no documented response headers (no X-RateLimit-*,
+  RateLimit-* or Retry-After), and no documented status code on exhaustion. The only
+  throughput signal in any public source is third-party scheduling guidance - integrators
+  describe refreshing ATD inventory hourly and pricing daily - which is a connector's polling
+  cadence, not a limit ATD publishes, so it is recorded here as context and NOT as a limit.
+  limit_count: 0 is a measured absence.
+docs: null
+headers: []
+observed_cadence:
+  - surface: inventory / quantity refresh
+    cadence: hourly
+    source: third-party integrator default schedule
+    is_provider_published_limit: false
+  - surface: pricing refresh
+    cadence: daily
+    source: third-party integrator default schedule
+    is_provider_published_limit: false
+limits: []

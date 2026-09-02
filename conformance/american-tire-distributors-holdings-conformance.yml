@@ -1,0 +1,57 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  Live probes of https://www.atd.com/ (200), https://atdonline.com/login (200),
+  https://customer.atd-us.com/ (200) and https://atd.okta.com/.well-known/openid-configuration
+  (200); plus third-party integrator documentation for the ATD partner API.
+note: >-
+  There is no American Tire Distributors machine-readable contract in this repo or on any ATD
+  host, so nothing below is asserted from a specification. Every entry records what was
+  actually observed. No certification, audit report or trust center was found on any ATD
+  surface (probe-security-programs.py: vdp=none trust=none), so no Compliance pointer is
+  emitted.
+conformance:
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      No OAuth 2.0 surface is published for the ATD partner API; integrator guides describe a
+      static API key plus secret issued by an ATD representative. The OAuth 2.0 metadata that
+      does answer on atd.okta.com belongs to ATD's Okta tenant (issuer https://atd.okta.com,
+      okta.* management scopes) and describes Okta's management API, not an ATD API.
+  - id: oidc
+    conforms: false
+    scope: corporate-sso-only
+    evidence: >-
+      OpenID Connect discovery answers 200 at https://atd.okta.com/.well-known/openid-configuration
+      for ATD's employee/portal SSO tenant, and customer.atd-us.com 302s unauthenticated
+      requests into an Okta SAML flow. This is workforce/customer-portal identity; it is not an
+      API authorization surface ATD publishes to integrators, so conforms is false for the API.
+  - id: rfc9457
+    conforms: false
+    evidence: No published error contract; no application/problem+json observed or documented.
+  - id: idempotency
+    conforms: false
+    evidence: No idempotency key, header or retry semantics documented on any public ATD surface.
+  - id: pagination
+    conforms: false
+    evidence: No public reference documents a pagination style for the ATD partner API.
+domain_standard:
+  determined: false
+  note: >-
+    The Kin Score regulatory map (api-search/signals/_data/scoring.yml) carries no regime for
+    automotive parts distribution, so there is no scoring shortlist to probe against. The
+    standards that would plausibly apply to a wholesale tire distributor of this scale -
+    Auto Care Association ACES/PIES for automotive product data, and ANSI X12 EDI (850/810/856)
+    for purchase orders, invoices and advance ship notices - are recorded here as CANDIDATES
+    ONLY. ATD makes no public claim to either and there is no contract to read the claim out
+    of, so none is asserted as conforming. Reward-only check: an unverified candidate is left
+    unverified rather than filled in.
+  candidates:
+    - id: aces-pies
+      label: Auto Care Association ACES / PIES automotive catalog data
+      claimed_by_provider: false
+      verified: false
+    - id: ansi-x12-edi
+      label: ANSI ASC X12 EDI (850 / 810 / 856) distribution messaging
+      claimed_by_provider: false
+      verified: false

@@ -1,0 +1,68 @@
+# American Tire Distributors Holdings
+
+> American Tire Distributors (ATD) is one of the largest independent suppliers of replacement
+> tires in North America, distributing passenger, light truck, medium truck and specialty tires
+> from more than 110 distribution centers to over 85,000 delivery points across the United
+> States and Canada.
+
+Generated: 2026-09-02
+Method: generated
+Source: apis.yml and the probed artifacts in this repository (no provider-published /llms.txt exists;
+https://www.atd.com/llms.txt returned HTTP 404 on 2026-09-02).
+
+## API status — read this first
+
+ATD operates a real partner API. It is not publicly documented.
+
+- ATD's partner/"Ship to Home" API is used in production by every major dropship integration
+  platform (Flxpoint, Spark Shipping, InfiPlex, Finale Inventory, X-Cart, Data Here-to-There)
+  to pull the ATD catalog, inventory quantities and dealer-specific pricing, to submit dropship
+  orders, and to retrieve shipment tracking.
+- ATD publishes **no** developer portal, **no** API reference, **no** getting-started page and
+  **no** machine-readable contract. Searched on 2026-09-02: no OpenAPI/Swagger, GraphQL SDL,
+  AsyncAPI, WSDL or .proto is reachable on any ATD host, and no api./developer./developers.
+  subdomain of atd.com or atd-us.com resolves in DNS.
+- Access is a term of the dealer relationship. A requester must be an approved ATD dealer;
+  an ATD representative issues an API key and secret by hand, and ATD must confirm a successful
+  Sandbox test order before Production ordering is enabled.
+- Do not attempt to construct ATD API calls from this file. No endpoint, path, parameter or
+  header for the ATD API is public, and none is stated here.
+
+## Official links
+
+- [ATD corporate site](https://www.atd.com) — company, network and brand portfolio
+- [ATDOnline dealer portal](https://atdonline.com/login) — ordering and account management (login required)
+- [ATDOnline dealer registration](https://atdonline.com/register) — apply for a dealer account
+- [What we offer](https://www.atd.com/what-we-offer/) — consumer, commercial and wheel brand portfolio
+- [Distribution network](https://www.atd.com/distribution-network/) — distribution center footprint
+- [Suppliers](https://www.atd.com/suppliers/) — supplier-facing information
+- [Articles](https://www.atd.com/about-us/articles/) — company news and dealer-facing articles
+- [Contact](https://www.atd.com/contactus/)
+- [Terms and conditions](https://www.atd.com/terms-and-conditions/)
+- [Privacy policy](https://www.atd.com/privacy-policy/)
+- [LinkedIn](https://www.linkedin.com/company/american-tire-distributors)
+
+## What ATD does
+
+- Distributes 16,500+ active tire SKUs from 110+ distribution centers with 1,400+ delivery vehicles.
+- Delivers over 30.5 million tire units annually to more than 85,000 delivery points in the US and Canada.
+- Serves independent tire dealers, automotive service centers, retailers and commercial fleets.
+- Runs ATDOnline, a digital ordering and account-management portal for dealers.
+- Offers a data-driven tire inventory recommendation engine and next-day delivery.
+
+## Artifacts in this repository
+
+- [Well-known probe](well-known/american-tire-distributors-holdings-well-known.yml) — every /.well-known/ path, every host, and what it returned
+- [Authentication](authentication/american-tire-distributors-holdings-authentication.yml) — the partner API auth model as reconstructed from integrator documentation
+- [Conformance](conformance/american-tire-distributors-holdings-conformance.yml) — standards observed and standards not asserted
+- [Plans / pricing](plans/american-tire-distributors-holdings-plans-pricing.yml) — nothing published (plan_count: 0)
+- [Rate limits](rate-limits/american-tire-distributors-holdings-rate-limits.yml) — nothing published (limit_count: 0)
+- [Domain security](security/american-tire-distributors-holdings-domain-security.yml) — TLS/HSTS/SPF/DMARC/DNSSEC probe
+
+## Not published by ATD
+
+No OpenAPI. No GraphQL. No AsyncAPI or webhook catalog. No MCP server. No A2A agent card.
+No SDKs or packages in npm, PyPI, Maven Central, NuGet, RubyGems, crates.io or pkg.go.dev.
+No public GitHub organization. No CLI. No status page. No changelog. No security.txt,
+vulnerability disclosure program or trust center. Each of these was searched on 2026-09-02
+and each absence is recorded, not assumed.

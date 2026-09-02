@@ -45,11 +45,53 @@ common:
     url: security/american-tire-distributors-holdings-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/american-tire-distributors
+    x-verified: '2026-09-02'
+    x-http-status: 200
   - type: Website
     url: https://www.atd.com
+    x-verified: '2026-09-02'
+    x-http-status: 200
   - type: Portal
-    url: https://www.atd.com/login
+    url: https://atdonline.com/login
     name: ATDOnline Dealer Portal
+    x-verified: '2026-09-02'
+    x-http-status: 200
+    x-note: >-
+      Replaced https://www.atd.com/login, which returned HTTP 404 on 2026-09-02. The live
+      dealer portal is ATDOnline.
+  - type: SignUp
+    url: https://atdonline.com/register
+    name: ATDOnline Dealer Registration
+    x-verified: '2026-09-02'
+    x-http-status: 200
+  - type: Support
+    url: https://www.atd.com/contactus/
+    name: Contact ATD
+    x-verified: '2026-09-02'
+    x-http-status: 200
+  - type: Blog
+    url: https://www.atd.com/about-us/articles/
+    name: ATD Articles
+    x-verified: '2026-09-02'
+    x-http-status: 200
+  - type: TermsOfService
+    url: https://www.atd.com/terms-and-conditions/
+    x-verified: '2026-09-02'
+    x-http-status: 200
+  - type: PrivacyPolicy
+    url: https://www.atd.com/privacy-policy/
+    x-verified: '2026-09-02'
+    x-http-status: 200
+  - type: LLMsTxt
+    url: llms/american-tire-distributors-holdings-llms.txt
+  - type: Authentication
+    url: authentication/american-tire-distributors-holdings-authentication.yml
+  - type: Conformance
+    url: conformance/american-tire-distributors-holdings-conformance.yml
+  - type: Plans
+    url: plans/american-tire-distributors-holdings-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/american-tire-distributors-holdings-rate-limits.yml
   - type: Features
     data:
       - name: Tire Distribution Network
@@ -110,3 +152,29 @@ maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
 specificationVersion: '0.23'
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    ATD runs a real dropship/inventory partner API that every major integration platform
+    connects to, but it publishes no developer site at all - api., developer. and developers.
+    subdomains of atd.com and atd-us.com do not resolve, atdonline.com 302s every path
+    including /openapi.json and /.well-known/* to /login, and the reference plus the API key
+    and secret are handed out by an ATD representative only to an approved dealer.
+  evidence:
+    - url: https://atdonline.com/openapi.json
+      status: 302
+    - url: https://www.atd.com/.well-known/api-catalog
+      status: 404
+    - url: https://www.atd.com/login
+      status: 404
+    - url: https://customer.atd-us.com/.well-known/openid-configuration
+      status: 302
+    - url: https://atdonline.com/register
+      status: 200
+  checked: '2026-09-02'

@@ -1,0 +1,115 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  Live unauthenticated GETs of the named /.well-known/ path list against every host American
+  Tire Distributors operates that we could identify: the corporate site (www.atd.com), the
+  ATDOnline dealer portal (atdonline.com), the ServiceNow customer portal
+  (customer.atd-us.com) and the corporate Okta tenant (atd.okta.com) discovered from the
+  SAML redirect customer.atd-us.com issues.
+note: >-
+  ATD serves no /.well-known/ documents from any host it publishes to developers or dealers.
+  www.atd.com answers every path with its 404 HTML page; atdonline.com 302s every path to
+  /login; customer.atd-us.com 302s every path into an Okta SAML flow. The ONLY 200s in this
+  probe came from atd.okta.com, and those documents are Okta platform defaults, not an ATD
+  contract: the OIDC discovery document declares issuer https://atd.okta.com and its
+  scopes_supported are Okta's own management scopes (okta.users.read, okta.apps.manage,
+  okta.logs.read ...), i.e. it describes the Okta management API that every Okta tenant
+  exposes, not any API American Tire Distributors publishes. Under the ownership rule those
+  bodies were NOT saved into this repo and no WellKnown / SecurityTxt / OAuthScopes pointer is
+  emitted from them - ATD itself publishes no well-known surface. This file records the
+  absence, which is the finding.
+hosts:
+  - host: www.atd.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: atdonline.com
+    note: Dealer portal - every path 302s to http://atdonline.com/login, including /.well-known/*
+    documents:
+      - path: /.well-known/security.txt
+        status: 302
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 302
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 302
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 302
+        file: null
+      - path: /.well-known/api-catalog
+        status: 302
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 302
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 302
+        file: null
+      - path: /.well-known/agent.json
+        status: 302
+        file: null
+  - host: customer.atd-us.com
+    note: >-
+      ServiceNow customer/support instance fronted by Okta SAML SSO; unauthenticated requests
+      302 to /auth_redirect.do -> https://atd.okta.com/app/americantiredistributorsus_servicenowemail_1/.../sso/saml
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 302
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 302
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: atd.okta.com
+    note: >-
+      ATD's corporate Okta tenant. Both 200s below are Okta platform defaults describing the
+      Okta management API (issuer https://atd.okta.com, okta.* scopes), NOT an American Tire
+      Distributors contract - bodies deliberately not saved, no pointer emitted.
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: null
+      - path: /.well-known/security.txt
+        status: 405
+        file: null
