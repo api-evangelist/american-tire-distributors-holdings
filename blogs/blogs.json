@@ -1,0 +1,14 @@
+{
+  "repo": "american-tire-distributors-holdings",
+  "feeds": [
+    {
+      "source": "https://www.atd.com/contactus/",
+      "feed_url": "https://www.atd.com/contactus/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-09-06T19:17:18Z"
+}
