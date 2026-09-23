@@ -1,7 +1,9 @@
 ---
 title: Contracts - API Evangelist Contracts
 url: https://contracts.apievangelist.com/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"American Tire Distributors Holdings" press release artificial intelligence'
 position: 3
 source: serpapi-google

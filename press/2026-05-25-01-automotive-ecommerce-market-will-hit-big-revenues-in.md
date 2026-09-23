@@ -1,7 +1,9 @@
 ---
 title: Automotive ECommerce Market Will Hit Big Revenues in ...
 url: https://www.openpr.com/news/3843861/automotive-ecommerce-market-will-hit-big-revenues-in-future
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"American Tire Distributors Holdings" press release artificial intelligence'
 position: 1
 source: serpapi-google
