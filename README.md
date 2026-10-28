@@ -1,4 +1,4 @@
-# American Tire Distributors Holdings (american-tire-distributors-holdings)
+# American Tire Distributors Holdings
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,53 +66,95 @@
 
 American Tire Distributors (ATD) is one of the largest independent suppliers of replacement tires in North America, distributing passenger, light truck, medium truck, and specialty tires from more than 110 distribution centers. ATD delivers over 30.5 million tire units annually to more than 85,000 delivery points across the United States and Canada, serving independent tire dealers, automotive service centers, and retailers.
 
-**URL:** [https://www.atd.com](https://www.atd.com)
+**Areas:** Tires · Automotive · Distribution · Wholesale · Supply Chain · Logistics
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## American Tire Distributors Holdings on APIs.io
 
-## Tags:
+Everything profiled for American Tire Distributors Holdings is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/american-tire-distributors-holdings/](https://apis.io/providers/american-tire-distributors-holdings/)** — or go straight to one of the APIs or properties below.
 
- - Tires, Automotive, Distribution, Wholesale, Supply Chain, Logistics
+### Published properties
 
-## Timestamps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Created:** 2024-11-15
-- **Modified:** 2026-04-19
+#### Security (2)
 
-## Common Properties
+Authentication, trust centre, and vulnerability disclosure.
+
+- [American Tire Distributors Holdings Authentication](https://apis.io/security/american-tire-distributors-holdings/american-tire-distributors-holdings-authentication/)
+- [American Tire Distributors Holdings Domain Security](https://apis.io/security/american-tire-distributors-holdings/american-tire-distributors-holdings-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [American Tire Distributors Holdings Plans Pricing](https://apis.io/plans/american-tire-distributors-holdings/american-tire-distributors-holdings-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [American Tire Distributors Holdings Rate Limits](https://apis.io/rate-limits/american-tire-distributors-holdings/american-tire-distributors-holdings-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.atd.com)
-- [ATDOnline Dealer Portal](https://www.atd.com/login)
+- [Sign up](https://atdonline.com/register)
+- [Support](https://www.atd.com/contactus/)
+- [Blog](https://www.atd.com/about-us/articles/)
+- [Terms of service](https://www.atd.com/terms-and-conditions/)
+- [Privacy policy](https://www.atd.com/privacy-policy/)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Tire Distribution Network | Distribution of 16,500+ active tire products across 110+ distribution centers with 1,400+ delivery vehicles serving over 85,000 delivery points nationwide. |
-| ATDOnline Customer Portal | Digital ordering and account management portal for tire dealers to browse inventory, place orders, track deliveries, and manage accounts online. |
-| Inventory Recommendation Engine | Data-driven tire recommendation engine helping dealers optimize inventory selection and improve same-day sales performance. |
-| Next-Day Delivery | Nationwide next-day tire delivery capabilities from strategically located distribution centers to maximize tire dealer inventory efficiency. |
-| Dealer Business Support | Full-service business support including strategic planning, marketing resources, and operational guidance for independent tire dealer customers. |
-| Specialty and Commercial Tires | Distribution of specialty tires including medium truck, farm, recreational vehicle, and off-the-road tires alongside standard passenger and light truck products. |
+**Kin Score 19.5** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 34.2 |
 
-| Name | Description |
-|------|-------------|
-| Independent Tire Dealer Supply | Providing independent tire dealers with just-in-time tire inventory replenishment from local distribution centers to minimize on-hand stock requirements. |
-| Automotive Service Center Inventory | Supplying automotive service chains, quick-lube centers, and dealerships with replacement tires to support their vehicle service operations. |
-| Commercial Fleet Tire Management | Supplying medium truck and commercial tires for fleet maintenance operations and commercial vehicle service providers. |
-| Retail Tire Program Management | Supporting retailers and buying groups with private-label tire programs and branded tire distribution across national accounts. |
+**Agent readiness 5.0** — human-only
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| Dealer Management Systems | Integration with tire dealer management systems for automated inventory ordering, price updates, and order tracking through ATD's digital platform. |
-| Point-of-Sale Systems | Connectivity with dealer point-of-sale and service management software for real-time inventory availability and order placement. |
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/american-tire-distributors-holdings/](https://apis.io/providers/american-tire-distributors-holdings/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** info@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for American Tire Distributors Holdings: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/american-tire-distributors-holdings/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
